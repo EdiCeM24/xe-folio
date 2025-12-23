@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <title>EdiMars Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link href="/public/css/index.css" rel="stylesheet"/>
+  <link href="/public/css/responsiveness.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Ovo&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <nav class="header">
+      <div class="">
+        <a href="/" class="">
+          <img src="/public/assets/mylogo-name.png" alt="Logo" class="img-logo">
+        </a>
+      </div>
+      <div class="header-modal">
+        <button type="button" class="btn btn-primary about-page-btn" id="modalAbout">About</button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">Contact</button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Works</button>
+      </div>
+      <div class="header-container">
+        <button id="dropMenu" class="dropMenu">Menu</button>
+        <div class="header-nav aside" id="aside">
+          <span id="close">X</span>
+          <a href="">Home</a>
+          <a href="">About</a>
+          <a href="/views/contact.html">Contact</a>
+          <a href="">Works</a>
+          <a href="">Services</a>
+        </div>
+      </div>
+      <div class="header-contents">
+        <button class="dropBtn">Login</button>
+        <div class="contents">
+          <p>Don't have an account? <a href="">Sign Up</a></p>
+          <p>Have an account? <a href="">Sign In</a></p>
+        </div>
+      </div>
+    </nav>
+    <main class="main-container">
+      <div class="main-content">
+        <img src="/public/assets/FB_IMG_17576616873548808.jpg" alt="Image">
+      </div>
+      <div class="main-contents">
+        <h1>Hi!</h1>
+        <strong>I'm Marcus Edidiong Cletus</strong>
+        <div class="web">
+          <img src="/public/assets/web.jpg" alt="">
+          <h2>A Web Developer</h2>
+        </div>
+        <div class="c-s">
+          <img src="/public/assets/cs.png" alt="">
+          <p>Studied Computer Science</p>
+        </div>
+        <div class="social-icons">
+          <a href=""><img src="/public/assets/github.png" alt="" class="social-icon-img"></a>
+          <a href=""><img src="/public/assets/linkedin.png" alt="" class="social-icon-img"></a>
+          <a href=""><img src="/public/assets/facebook.png" alt="" class="social-icon-img"></a>
+          <a href=""><img src="/public/assets/twitter.jpg" alt="" class="social-icon-img"></a>
+        </div>
+        <div class="links">
+          <a href="" class="contact-pointer">Contact me <img src="/public/assets/pointer.jpg" alt="" class="pointer"></a>
+          <a href="/public/assets/best_resume (2).pdf" download title="Download" class="resume">Resume  <i class="bi bi-download"></i></a>
+        </div>
+      </div>
+      <div class="about-page" id="about-container">
+        <div class="about">
+          <div class="about-content">
+            <div class="about-header">
+              <h2>About Me</h2>
+            </div>
+            <div class="about-content">
+              <p>About Contents here</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-page">
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Contact Me</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="mb-3">
+                    <label for="recipient-name" class="col-form-label">Recipient:</label>
+                    <input type="text" class="form-control" id="recipient-name">
+                  </div>
+                  <div class="mb-3">
+                    <label for="message-text" class="col-form-label">Message:</label>
+                    <textarea class="form-control" id="message-text"></textarea>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Send message</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="my-work">
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">My Latest Works</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Understood</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+    <footer class="main-footer">
+      <p class="d-flex mt-3 align-items-center justify-content-center text-blue">&copy; All rights reserved  <script>document.writeln(new Date().getFullYear());</script>  Macus Edidiong Cletus</p>
+    </footer>
+  </div>
+  <script src="/public/js/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/brands.min.js" integrity="sha512-1oGeXc5l4herTE3V53KHlBbraV/KLHfpqCNjqhT/A6xcxXXhZa+TaXRKDMn/cCXWfWyo+JheaQDcd0n1HTLkkg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

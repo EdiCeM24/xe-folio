@@ -15,7 +15,7 @@
 body {
   margin: 0;
   padding: 0;
-  height: 100vh;
+  min-height: 200vh;
   font-family: "Outfit", sans-serif;
   background-color: var(--color-white);
   overflow: hidden;
@@ -79,6 +79,16 @@ body {
 .dropMenu {
   display: none;
 }
+.login-contents {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  line-height: 1.5;
+  width: 60%;
+  height: 70%;
+  padding-top: 30px;
+}
 .dropBtn {
   cursor: pointer;
   top: 0;
@@ -86,6 +96,42 @@ body {
   margin-left: -5%;
   flex-wrap: nowrap;
   border-radius: 10px;
+}
+.contents {
+  visibility: hidden;
+  width: 40%;
+  height: 50%;
+  background-color: #eee;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 0;
+  top: 10%;
+  z-index: 1;
+  padding: 20px 10px;
+}
+.auth-contents {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.auth-close {
+  font-size: 22px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #ff0000;
+  display: inline;
+  align-items: center;
+  justify-content: center;
+}
+.auth-close.in-active {
+  visibility: hidden;
+}
+#signupLogin.show {
+  visibility: visible;
 }
 .contents {
   display: none;
@@ -248,6 +294,79 @@ body {
 .show {
   display: block;
 }
+/** STRENGTH MODAL **/
+.modal-overlay {
+  /** Hidden by default **/
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: flex-start;  /** Align to the top initially **/
+  opacity: 0;
+  transition: visibility 0.3s, opacity 0.3s ease-in-out;
+  padding-top: 10px; /** Space from the top when it appears **/
+  visibility: hidden;
+}
+/** Modal Content **/
+.modal-strength {
+  background-color: var(--color-white);
+  margin-top: 50px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  width: 80%;
+  max-width: 800px;
+  max-height: 80vh;
+  overflow-y: auto;
+  border-radius: 8px;
+  /** Initial state (off-screen above and hidden) **/
+  transform: translateY(-50px);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.modal-overlay.active {
+  visibility: visible;
+  opacity: 1
+}
+.modal-overlay.active .modal-strength {
+  opacity: 1;
+  /** Final state (in view) **/
+  transform: translateY(0);
+}
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.close-btn {
+  cursor: pointer;
+  font-size: 24px;
+  color: #ff0000;
+}
+.close-btn:hover {
+  color: #290101;
+}
+.modal-body-strength {
+  padding-top: 20px;
+  width: 100%;
+  height: 80%;
+  display: block;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+  background-color: aliceblue;
+}
+
 
 .main-footer {
   display: flex;

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +7,7 @@
   <title>EdiMars Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <link href="/public/css/index.css" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
   <link href="/public/css/responsiveness.css" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -25,7 +26,9 @@
       <div class="header-modal">
         <button type="button" class="btn btn-primary about-page-btn" id="modalAbout">About</button>
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">Contact</button>
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Works</button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Portfolio</button>
+        <button type="button" class="btn btn-primary" id="openModalBtn">Strength</button>
+        <button type="button" class="btn btn-primary services-page-btn" id="modalServices">Services</button>
       </div>
       <div class="header-container">
         <button id="dropMenu" class="dropMenu">Menu</button>
@@ -38,11 +41,14 @@
           <a href="">Services</a>
         </div>
       </div>
-      <div class="header-contents">
-        <button class="dropBtn">Login</button>
-        <div class="contents">
-          <p>Don't have an account? <a href="">Sign Up</a></p>
-          <p>Have an account? <a href="">Sign In</a></p>
+      <div class="login-contents">
+        <button class="dropBtn btn btn-secondary">Login</button>
+        <div class="contents" id="signupLogin">
+          <span id="auth-close" class="auth-close">&times;</span>
+          <div class="auth-contents">
+            <p>Don't have an account? <a href="">Sign Up</a></p>
+            <p>Have an account? <a href="">Sign In</a></p>
+          </div>
         </div>
       </div>
     </nav>
@@ -68,7 +74,7 @@
           <a href=""><img src="/public/assets/twitter.jpg" alt="" class="social-icon-img"></a>
         </div>
         <div class="links">
-          <a href="" class="contact-pointer">Contact me <img src="/public/assets/pointer.jpg" alt="" class="pointer"></a>
+          <a href="" class="contact-pointer" data-bs-toggle="modal" data-bs-target="#exampleModal">Contact me <img src="/public/assets/pointer.jpg" alt="" class="pointer"></a>
           <a href="/public/assets/best_resume (2).pdf" download title="Download" class="resume">Resume  <i class="bi bi-download"></i></a>
         </div>
       </div>
@@ -94,20 +100,40 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                <form>
+                <form action="" method="post">
                   <div class="mb-3">
-                    <label for="recipient-name" class="col-form-label">Recipient:</label>
-                    <input type="text" class="form-control" id="recipient-name">
+                    <label for="recipient-name" class="col-form-label">First Name:</label>
+                    <input type="text" name="first_name" class="form-control" id="recipient-name" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="recipient-name" class="col-form-label">Last Name:</label>
+                    <input type="text" name="last_name" class="form-control" id="recipient-name" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="recipient-name" class="col-form-label">Email:</label>
+                    <input type="email" name="email" class="form-control" id="recipient-name" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="recipient-name" class="col-form-label">Company Website:</label>
+                    <input type="url" name="website" class="form-control" id="recipient-name" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="recipient-name" class="col-form-label">Company Telephone:</label>
+                    <input type="tel" name="phone_number" class="form-control" id="recipient-name" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="recipient-name" class="col-form-label">Subject:</label>
+                    <input type="text" name="subject" class="form-control" id="recipient-name" required>
                   </div>
                   <div class="mb-3">
                     <label for="message-text" class="col-form-label">Message:</label>
-                    <textarea class="form-control" id="message-text"></textarea>
+                    <textarea name="message" class="form-control" id="message-text"></textarea>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Send message</button>
                   </div>
                 </form>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Send message</button>
               </div>
             </div>
           </div>
@@ -125,6 +151,7 @@
               </div>
               <div class="modal-body">
                 ...
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis debitis dolores repellat possimus, error ad optio dolor soluta tempore quae ipsum eaque officia quaerat, quidem ratione? Ex sequi amet doloribus, fugiat repellendus delectus aspernatur sint ipsam enim illum quaerat, eius vel dignissimos error, culpa sapiente repudiandae perspiciatis. Ullam, molestiae nisi vel autem sint libero atque et laborum iste, magni in provident dignissimos natus sunt delectus dolore! Modi delectus totam eligendi. Culpa deleniti distinctio excepturi sunt. Quae repellendus corporis perspiciatis soluta sunt! Distinctio earum id numquam, aspernatur eum perferendis reiciendis eaque, repudiandae accusamus minima officia iusto. Illo tempora sequi, provident aut adipisci voluptate repudiandae unde asperiores eveniet consequatur velit assumenda atque labore voluptatibus odio. Dolorum enim illo in, quisquam nemo debitis magnam officia earum vel blanditiis iusto impedit repellendus fuga, voluptatum accusamus molestias voluptate necessitatibus? Blanditiis nam laborum quo numquam, alias rerum ea reiciendis odio temporibus accusamus optio tempore explicabo suscipit at illum ab perferendis corrupti placeat sed perspiciatis, harum animi! Eveniet dolore corrupti ullam dolorum maiores cum rem nihil tempore laborum praesentium. Corrupti consectetur harum accusamus pariatur dolorum itaque aperiam ut eaque, molestiae at, dicta ullam consequatur quisquam! Minima totam, repellat hic adipisci reiciendis eos ducimus maxime quisquam numquam assumenda?</p>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -134,6 +161,106 @@
           </div>
         </div>
       </div>
+    
+      <section id="modalOverlay" class="modal-overlay flex items-center justify-center flex-col md:mt-[25%] h-[50%] mb-4 bg-white rounded-md shadow-md">
+        <div id="modal-strength" class="modal-strength">
+          <div class="modal-header">
+            <strong class="mb-1 mt-[1%]">My Programming Abilities</strong>
+            <span class="close-btn">&times;</span>
+          </div>
+        </div>
+
+        <div class="modal-body-strength">
+          <div class="frontend-container p-5 m-4 w-[80%] bg-pink-500 rounded-md">
+            <strong class="mb-4 text-xl font-semibold flex items-center justify-center">Frontend Development Tools</strong>
+            <div class="html-container flex items-center gap-1">
+              <label for="" class="text-html text-lg font-semibold">HTML:</label>
+                <input type="range" name="range" id=range class="HTML w-[95%] text-teal-800" value="95%">
+                <span class="">95%</span>
+            </div>
+            <div class="css-container flex items-center gap-1">
+              <label for="" class="text-css text-lg font-semibold">CSS:</label>
+              <input type="range" name="range" id=range class="CSS w-[85%]">
+              <span class="">85%</span>
+            </div>
+            <div class="flex items-center gap-1">
+              <label for="" class="text-javascript text-lg font-semibold">JavaScript:</label>
+              <input type="range" name="range" id=range class="JAVASCRIPT w-[70%]">
+              <span class="">70%</span>
+            </div>
+            <div class="flex items-center gap-1">
+              <label for="" class="text-typescript text-lg font-semibold">Typescript:</label>
+              <input type="range" name="range" id=range class="TYPESCRIPT w-[50%]">
+              <span class="">50%</span>
+            </div>
+            <div class="flex items-center gap-1">
+              <label for="" class="text-react-js text-lg font-semibold">React.js:</label>
+              <input type="range" name="range" id=range class="REACT w-[60%]">
+              <span class="">60%</span>
+            </div>
+          </div>
+          
+          <div class="p-5 m-4 w-[80%] bg-amber-300 rounded-md">
+            <strong class="mb-4 text-xl font-semibold flex items-center justify-center">Backend Development Tools</strong>
+            <div class="flex items-center gap-1">
+              <label for="" class="text-python text-lg font-semibold">Python:</label>
+              <input type="range" name="range" id=range class="PYTHON w-[60%]">
+              <span class="">60%</span>
+            </div>
+            <div class="flex items-center gap-1">
+              <label for="" class="text-node-js text-lg font-semibold">Node.js:</label>
+              <input type="range" name="range" id=range class="NODEJS w-[70%]">
+              <span class="">70%</span>
+            </div>
+            <div class="flex items-center gap-1">
+              <label for="" class="text-django text-lg font-semibold">Django:</label>
+              <input type="range" name="range" id=range class="DJANGO w-[70%]">
+              <span class="">70%</span>
+            </div>
+            <div class="flex items-center gap-1">
+              <label for="" class="text-flask text-lg font-semibold">Flask:</label>
+              <input type="range" name="range" id=range class="FLASK w-[60%]">
+              <span class="">60%</span>
+            </div>
+            <div class="flex items-center gap-1">
+              <label for="" class="text-express-js text-lg font-semibold">Express:</label>
+              <input type="range" name="range" id=range class="EXPRESS-JS w-[70%]">
+              <span class="">70%</span>
+            </div>
+            <div class="flex items-center gap-1">
+              <label for="" class="text-postgresql text-lg font-semibold">PostgreSQL:</label>
+              <input type="range" name="range" id=range class="POSTGRESQL w-[65%]">
+              <span class="">65%</span>
+            </div>
+            <div class="flex items-center gap-1">
+              <label for="" class="text-mysql text-lg font-semibold">MySQL:</label>
+              <input type="range" name="range" id=range class="MYSQL w-[70%]">
+              <span class="">70%</span>
+            </div>
+            <div class="flex items-center gap-1">
+                <label for="" class="text-mongodb text-lg font-semibold">MongoDB:</label>
+                <input type="range" name="range" id=range class="MONGODB w-[75%]">
+                <span class="">75%</span>
+            </div>
+          </div>
+
+          <div class="p-5 m-4 w-[80%] bg-red-700 rounded-md">
+            <strong class="mb-4 text-xl font-semibold flex items-center justify-center">Version Control System Tools</strong>
+            <div class="flex items-center gap-1">
+              <label for="" class="text-git text-lg font-semibold">Git:</label>
+              <input type="range" name="range" id=range class="GIT w-[70%]">
+              <span class="">70%</span>
+            </div>
+
+            <div class="flex items-center gap-1">
+              <label for="" class="text-mercurial text-lg font-semibold">Mercurial:</label>
+              <input type="range" name="range" id=range class="MERCURIAL w-[40%]">
+              <span class="">40%</span>
+            </div>
+          </div>
+        </div>
+        </section>
+      </div>  
 
     </main>
     <footer class="main-footer">

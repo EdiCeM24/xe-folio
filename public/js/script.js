@@ -14,6 +14,63 @@ const openModalBtnEl = document.getElementById("openModalBtn");
 const modalOverlay = document.getElementById("modalOverlay")
 const closeModalBtnEl = document.querySelector(".close-btn");
 
+// Signup and Login Modal
+const signupBtnPopup = document.getElementById("signupBtn");
+const signupPopupEl = document.getElementById("signup-popup");
+const loginBtnPopup = document.getElementById("loginBtn-inner");
+const loginPopupEl = document.getElementById("login-popup");
+// const loginFormClose = document.getElementById("");
+
+
+
+// Event Listeners
+signupBtnPopup.addEventListener('click', signupBtnPopupForm);
+loginBtnPopup.addEventListener('click', loginBtnPopupForm);
+
+function loginBtnPopupForm() {
+  loginPopupEl.classList.add("open-login-popup");
+}
+
+function loginFormClose() {
+  loginPopupEl.classList.remove("open-login-popup");
+}
+
+function closeDisplayLogin() {
+  if(loginBtnPopup === "click") {
+     signupLoginEl.classList.remove("signupLoginDisplay");
+  }
+
+  signupLoginEl.style.display = "none";
+}
+
+window.addEventListener("click", (e) => {
+  if(e.target === loginPopupEl) {
+    loginFormClose();
+  }
+});
+
+
+function signupBtnPopupForm() {
+  signupPopupEl.classList.add("open-popup");
+}
+
+function formClose() {
+  signupPopupEl.classList.remove("open-popup");
+}
+
+window.addEventListener("click", (e) => {
+  if(e.target === signupPopupEl) {
+    formClose();
+  }
+});
+
+function closeDisplay() {
+  if(signupBtnPopup === "click") {
+     signupLoginEl.classList.remove("signupLoginDisplay");
+  }
+
+  signupLoginEl.style.display = "none";
+}
 
 
 

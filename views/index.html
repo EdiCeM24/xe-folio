@@ -30,6 +30,10 @@
         <button type="button" class="btn btn-primary" id="openModalBtn">Strength</button>
         <button type="button" class="btn btn-primary services-page-btn" id="modalServices">Services</button>
       </div>
+      <div class="loginBtn">
+        <button class="dropBtn btn btn-secondary">Login</button>
+      </div>
+       <!--For Mobile View-->
       <div class="header-container">
         <button id="dropMenu" class="dropMenu">Menu</button>
         <div class="header-nav aside" id="aside">
@@ -41,13 +45,14 @@
           <a href="">Services</a>
         </div>
       </div>
+
       <div class="login-contents">
-        <button class="dropBtn btn btn-secondary">Login</button>
         <div class="contents" id="signupLogin">
           <span id="auth-close" class="auth-close">&times;</span>
           <div class="auth-contents">
-            <p>Don't have an account? <a href="">Sign Up</a></p>
-            <p>Have an account? <a href="">Sign In</a></p>
+            <p>Don't have an account? <button type="button" id="signupBtn" class="signupBtn" onclick="closeDisplay();">Sign Up</button></p>
+        
+            <p>Have an account? <button type="button" id="loginBtn-inner" class="loginBtn-inner" onclick="closeDisplayLogin();">Login</button></p>
           </div>
         </div>
       </div>
@@ -261,6 +266,82 @@
         </div>
         </section>
       </div>  
+
+      <!-- Signup Popup -->
+       <div class="signup-form-control shadow-md" id="signup-popup">
+          <div class="form-container">
+            <div class="flex items-center justify-between mt-4 mb-3">
+              <strong class="">Sign Up Here</strong>
+              <button type="button" onclick="formClose()">Close</button>
+            </div>
+            <form action="" method="POST">
+              <div class="mb-3">  
+                <label for="first_name" class="form-label">First Name:</label>
+                <input type="text" class="form-control" id="first_name" name="first_name" required>
+              </div>
+              <div class="mb-3">  
+                <label for="last_name" class="form-label">Last Name:</label>
+                <input type="text" class="form-control" id="last_name" name="last_name" required>
+              </div>
+              <div class="mb-3">  
+                <label for="username" class="form-label">Username:</label>
+                <input type="text" class="form-control" id="username" name="username" required>
+              </div>
+              <div class="mb-3">  
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+              </div>
+              <div class="mb-3">  
+                <label for="password" class="form-label">Password:</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+              </div>
+              <div class="mb-3">  
+                <a href="#" onclick="openPopupForgotPassword()">Forgot Password?</a>
+                <p>By clicking Sign Up, you agree to our <a href="">Terms and Conditions</a> and <a href="">Privacy Policy</p>
+              </div> 
+
+              <button type="submit" class="btn btn-primary">Sign Up</button>
+            </form>
+            <div class="">
+              <strong>Or</strong>
+              <p>Sign Up with Social Accounts</p>
+            </div>
+            <div class="">
+              <a href="">Google</a>
+              <a href="">Github</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- LOGIN Popup Form -->
+        <div class="login-form-control shadow-md" id="login-popup">
+          <div class="form-container">
+            <div class="flex items-center justify-between mt-4 mb-3">
+              <strong class="">Login Here</strong>
+              <button type="button" onclick="loginFormClose()">Close</button>
+            </div>
+            <form action="" method="POST">
+              <div class="mb-3">  
+                <label for="username" class="form-label">Username:</label>
+                <input type="text" class="form-control" id="username" name="username" required>
+              </div>
+              <div class="mb-3">  
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+              </div>
+              <div class="mb-3">  
+                <label for="password" class="form-label">Password:</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+              </div>
+              <div class="mb-3">  
+                <p>Forgot Password?  <a href="#" onclick="openPopupForgotPassword()">Reset With Email</a></p>
+                <p>Don't have an account? <a href="">Sign Up</a></p>
+              </div> 
+
+              <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+          </div>
+        </div> 
 
     </main>
     <footer class="main-footer">

@@ -15,10 +15,10 @@
 body {
   margin: 0;
   padding: 0;
-  min-height: 200vh;
+  min-height: 100vh;
   font-family: "Outfit", sans-serif;
   background-color: var(--color-white);
-  overflow: hidden;
+  /* overflow: hidden; */
    font-family: "Ovo", serif;
 }
 .pointer {
@@ -31,6 +31,7 @@ body {
   padding: 20px;
   background-color: #367cfb;
   width: 100%;
+  max-height: 700px;
 }
 .header {
   display: flex;
@@ -87,20 +88,24 @@ body {
   line-height: 1.5;
   width: 60%;
   height: 70%;
-  padding-top: 30px;
+  /* padding-top: 30px; */
 }
 .dropBtn {
   cursor: pointer;
-  top: 0;
+  top: 3%;
   padding: 4px 10px;
   margin-left: -5%;
   flex-wrap: nowrap;
   border-radius: 10px;
+  margin-top: 4%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .contents {
   visibility: hidden;
   width: 40%;
-  height: 50%;
+  height: 40%;
   background-color: #eee;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
   flex-direction: column;
@@ -108,18 +113,115 @@ body {
   justify-content: center;
   position: fixed;
   right: 0;
-  top: 10%;
+  top: 3%;
   z-index: 1;
   padding: 20px 10px;
+}
+.signupLoginDisplay {
+  visibility: hidden;
+  transition: transform 0.4s top 0.4s ease-in-out;
+  transform: translate(-50%);
 }
 .auth-contents {
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  margin: 20px;
+  padding: 20px 30px;
 }
+.signupBtn, .loginBtn-inner {
+  background: linear-gradient(to right, #00ffff, #800080, #ff4500);
+  padding: 5px 10px;
+  margin: 20px;
+  border-radius: 4px;
+  color: var(--color-white);
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: none;
+}
+.signupBtn:hover, .loginBtn-inner:hover {
+  background: linear-gradient(to right, #00bfff, #000080, #ff0000);
+}
+.signupBtn {
+  margin-top: 0;
+}
+.loginBtn {
+  margin-top: 20px;
+}
+.loginBtn-inner {
+  margin-top: 0;
+}
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.login-form input {
+  padding: 5px;
+  border-radius: 4px;
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+  width: 100%;
+}
+.signup-form-control {
+  width: 400px;
+  background-color: #eaf;
+  border-radius: 6px;
+  position: absolute;
+  top: 3%;
+  left: 65%;
+  transform: translateY(-50%, -50%) scale(0.1);
+  align-items: center;
+  padding: 0 30px 30px;
+  color: #333;
+  visibility: hidden;
+  transition: transform 0.4s top 0.4s;
+  height: 100%;
+  max-height: fit-content;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+  scroll-behavior: auto;
+}
+.open-popup {
+  visibility: visible;
+  transform: translateY(-50%, -50%) scale(1);
+  top: 5%;
+}
+.login-form-control {
+  width: 400px;
+  background-color: #eaf;
+  border-radius: 6px;
+  position: absolute;
+  top: 3%;
+  left: 65%;
+  transform: translateY(-50%, -50%) scale(0.1);
+  align-items: center;
+  padding: 0 30px 30px;
+  color: #333;
+  visibility: hidden;
+  transition: transform 0.4s top 0.4s;
+  height: 100%;
+  max-height: fit-content;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+  scroll-behavior: auto;
+}
+.open-login-popup {
+  visibility: visible;
+  transform: translateY(-50%, -50%) scale(1);
+  top: 5%;
+}
+.close-open-login-popup {
+  visibility: hidden;
+  transform: translateY(-50%, -50%) scale(0.1);
+  top: 3%;
+}
+
+
 .auth-close {
-  font-size: 22px;
+  font-size: 30px;
   font-weight: 600;
   cursor: pointer;
   color: #ff0000;

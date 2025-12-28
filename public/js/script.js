@@ -9,6 +9,7 @@ const authCloseEl = document.getElementById("auth-close");
 const aboutModalEl = document.getElementById("modalAbout");
 const aboutContainerEl = document.getElementById("about-container");
 
+
 // STRENGTHS
 const openModalBtnEl = document.getElementById("openModalBtn");
 const modalOverlay = document.getElementById("modalOverlay")
@@ -21,6 +22,24 @@ const loginBtnPopup = document.getElementById("loginBtn-inner");
 const loginPopupEl = document.getElementById("login-popup");
 // const loginFormClose = document.getElementById("");
 
+// ABOUT SECTION CONTENT (TEXTs) DISPLAY
+const contentDisplaysEl = document.querySelectorAll("#content-displays");
+const contentRevealsEl = document.querySelectorAll("#content-reveals");
+
+
+     
+
+contentDisplaysEl.forEach((icon, index) => {
+      
+  icon.addEventListener("click", () => {
+    contentDisplaysEl.forEach((icon) => {
+      icon.classList.remove("rotate-60");
+    });
+
+    icon.classList.toggle("rotate-90");
+    contentRevealsEl[index].classList.toggle("hidden");
+  });
+});
 
 
 // Event Listeners
@@ -125,6 +144,17 @@ aboutModalEl.addEventListener("click", (e) => {
   aboutContainerEl.classList.add("show"); 
 });
 
+function closeAbout() {
+  //aboutContainerEl.style.display = "none"; // I need to change the DOM.
+
+  aboutContainerEl.classList.remove("about-active");
+  
+  setTimeout(() => {
+    aboutContainerEl.style.display = "none";
+  }, 10);
+
+}
+
 //STRENGTH MODAL
 function openModal() {
   // Make it visible immediately (display: flex) so transition can start
@@ -156,6 +186,13 @@ modalOverlay.addEventListener('click', (e) => {
 });
 
 
+// CAROUSEL BOOTSTRAP
+const myCarouselElement = document.querySelector('#myCarousel')
+
+const carousel = new bootstrap.Carousel(myCarouselElement, {
+  interval: 2000,
+  touch: false
+})
 
 //Bootstap modal
 const myModal = document.getElementById('myModal')
@@ -164,5 +201,14 @@ const myInput = document.getElementById('myInput')
 myModal.addEventListener('shown.bs.modal', () => {
   myInput.focus()
 })
+
+
+
+// if(aboutContainerEl.classList.contains("show-about")) {
+//     console.log("About modal still open");
+//   } else {  
+//     aboutContainerEl.classList.remove("show-about");
+//   }
+
 
 

@@ -1,6 +1,6 @@
-const dropMenuEl = document.getElementById("dropMenu");
-const asideEl = document.getElementById("aside");
-const closeEl = document.getElementById("close");
+// const dropMenuEl = document.getElementById("dropMenu");
+// const asideEl = document.getElementById("aside");
+// const closeEl = document.getElementById("close");
 const dropBtnEl = document.querySelector(".dropBtn");
 const signupLoginEl = document.querySelector("#signupLogin");
 const authCloseEl = document.getElementById("auth-close");
@@ -93,17 +93,17 @@ function closeDisplay() {
 
 
 
-dropMenuEl.addEventListener('click', () => {
-  asideEl.style.display = "block";
-});
+// dropMenuEl.addEventListener('click', () => {
+//   asideEl.style.display = "block";
+// });
 
-closeEl.addEventListener('click', () => {
-  closeMenu();
-});
+// closeEl.addEventListener('click', () => {
+//   closeMenu();
+// });
 
-function closeMenu() {
-  asideEl.style.display = "none";
-}
+// function closeMenu() {
+//   asideEl.style.display = "none";
+// }
 
 //Login Btn on Navbar
 function openDropBtn() {

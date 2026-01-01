@@ -18,48 +18,28 @@
 <body>
   <div class="container">
     <nav class="header">
-      <div class="">
+      <div class="logo">
         <a href="/" class="">
           <img src="/public/assets/mylogo-name.png" alt="Logo" class="img-logo">
         </a>
       </div>
-      <div class="header-modal">
-        <button type="button" class="btn btn-primary about-page-btn" id="modalAbout">About</button>
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">Contact</button>
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Portfolio</button>
-        <button type="button" class="btn btn-primary" id="openModalBtn">Strength</button>
-        <button type="button" class="btn btn-primary services-page-btn" id="modalServices">Services</button>
-        <div class="testimonial">
-          <button type="button" class="btn btn-primary testimonials-page-btn" id="modalTestimonials">Testimonials</button>
-        </div>
-      </div>
-      <div class="loginBtn gap-[30%]">
-        <button class="dropBtn btn btn-secondary">Login</button>
-      </div>
-       <!--For Mobile View-->
-      <div class="header-container">
-        <button id="dropMenu" class="dropMenu">Menu</button>
-        <div class="header-nav aside" id="aside">
-          <span id="close">X</span>
-          <a href="">Home</a>
-          <a href="">About</a>
-          <a href="/views/contact.html">Contact</a>
-          <a href="">Works</a>
-          <a href="">Services</a>
-        </div>
-      </div>
 
-      <div class="login-contents">
-        <div class="contents" id="signupLogin">
-          <span id="auth-close" class="auth-close">&times;</span>
-          <div class="auth-contents">
-            <p>Don't have an account? <button type="button" id="signupBtn" class="signupBtn" onclick="closeDisplay();">Sign Up</button></p>
-        
-            <p>Have an account? <button type="button" id="loginBtn-inner" class="loginBtn-inner" onclick="closeDisplayLogin();">Login</button></p>
-          </div>
+      
+        <div class="header-modal ">
+          <button type="button" class="btn btn-primary about-page-btn" id="modalAbout">About</button>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">Contact</button>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Portfolio</button>
+          <button type="button" class="btn btn-primary" id="openModalBtn">Strength</button>
+          <button type="button" class="btn btn-primary services-page-btn" id="modalServices">Services</button>
         </div>
-      </div>
+        <div class="loginBtn gap-[30%]">
+          <button class="dropBtn btn btn-secondary">Login</button>
+        </div>
+        <!--For Mobile View-->
+     
+
     </nav>
+
     <main class="main-container">
       <div class="main-content">
         <img src="/public/assets/FB_IMG_17576616873548808.jpg" alt="Image">
@@ -88,70 +68,9 @@
       </div>
 
       <!---- TESTIMONIALS PAGE MODAL ---->
-       <!--- TESTIMONIALS --->
-      <div class="testimonials p-4 ">
-        <strong class="flex items-center justify-center mt-4 mb-6 text-3xl font-semibold text-blue-900">Testimonials</strong>
-        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="/public/assets/edi.png" class="d-flex items-center justify-content-center w-50" alt="...">
-              <div class="carousel-caption d-none d-md-block mt-[20%]">
-                <h5>First slide label 1</h5>
-                <p>Some representative placeholder content for the first slide.</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="/public/assets/edi.png" class="w-50 flex items-center flex-col justify-center" alt="...">
-              <div class="carousel-caption d-none d-md-block mt-[20%]">
-                <h5>First slide label 1</h5>
-                <p>Some representative placeholder content for the first slide.</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="/public/assets/edi.png" class="w-50 flex flex-col items-center justify-center" alt="...">
-              <div class="carousel-caption d-none d-md-block mt-[20%]">
-                <h5>First slide label 1</h5>
-                <p>Some representative placeholder content for the first slide.</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="/public/assets/edi.png" class="w-50 flex flex-col items-center justify-center" alt="...">
-              <div class="carousel-caption d-none d-md-block mt-[20%]">
-                <h5>First slide label 1</h5>
-                <p>Some representative placeholder content for the first slide.</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="/public/assets/edi.png" class="w-50 flex flex-col items-center justify-center" alt="...">
-              <div class="carousel-caption d-none d-md-block mt-[20%]">
-                <h5>First slide label 1</h5>
-                <p>Some representative placeholder content for the first slide.</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="/public/assets/edi.png" class="w-50 flex flex-col items-center justify-center" alt="...">
-              <div class="carousel-caption d-none d-md-block mt-[20%]">
-                <h5>First slide label 1</h5>
-                <p>Some representative placeholder content for the first slide.</p>
-              </div>
-            </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-          </div>
-              
-          <div class="mt-4 mb-4"></div>
-                
-        </div>
-      </div>
       
       <!--ABOUT Page mODAL-->
-      <div class="about-page" id="about-container">
+      <div class="about-page h-screen" id="about-container">
         <div class="about">
           <div class="about-content">
             <div class="about-header mt-3 mb-6">
@@ -160,16 +79,16 @@
             </div>
 
             <div class="about-body-content">
-              <p class="mt-4 mb-2 flex items-center justify-center">About Contents here</p>
+              
               <div class=" flex flex-col items-center justify-between py-6 px-4">
                 <div class="flex items-center justify-center flex-col">
                   <img src="/public/assets/edi-in-suit.jpg" alt="My-Photo" class="">
                 </div>
 
                 <div class="">
-                  <span class="text-container"></span>
+                  <span class="text-container mt-5 mb-3 flex items-center justify-center">Typed Text</span>
 
-                  <section class="mt-24">
+                  <section class="mt-14">
                     <h1 class="flex items-center justify-center text-2xl font-semibold font-serif text-blue-800">Education</h1>
                     <article class="mt-[-10%]">
                       <section class="resume-contents flex flex-col mb-1 transition duration-200">
@@ -246,6 +165,10 @@
                             </div>
                           </div>
 
+                          <div class="personal-details">
+                            <p>My Age Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum tenetur asperiores vero aliquam eveniet vitae debitis necessitatibus eius consectetur, quo harum fugiat eos velit! Amet, et nihil nulla eius aspernatur rem quisquam incidunt saepe dolorum tenetur, voluptas magnam dignissimos quasi dolores veritatis. Voluptatum aperiam repudiandae numquam. Sit, in accusantium totam modi dolorum unde soluta beatae vel eaque eum omnis ex veniam excepturi voluptates praesentium consequuntur voluptate doloribus? Deleniti dolore rerum distinctio repellendus hic, asperiores debitis accusantium ipsam, dolor voluptates cum commodi ex dicta laborum magni assumenda sed nesciunt eveniet iusto tempora nisi quaerat reiciendis! Unde, aut porro! Vero, aliquam quo.</p>
+                          </div>
+
                           <div class="mt-4 mb-8 flex items-center justify-center flex-col">
                             <strong class="flex items-center justify-center text-3xl font-semibold text-blue-900 mt-3 mb-4">Frequently Asked Questions</strong>
                             <div class="d-block text-justify max-w-[500px] float-start">
@@ -295,21 +218,98 @@
                             </div>
                           </div>
                         </div>  
+
+                        <div class="mt-5 mb-4">
+                           <!---- TESTIMONIALS PAGE MODAL ---->
+                          <!--- TESTIMONIALS --->
+                          <div class="testimonial p-4 ">
+                            <strong class="flex items-center justify-center mt-4 mb-6 text-3xl font-semibold text-blue-900">Testimonials</strong>
+                            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                              <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                  <img src="/public/assets/edi.png" class="d-block items-center justify-content-center w-100 rounded-md" alt="...">
+                                  <div class="carousel-caption d-none d-md-block mt-[20%]">
+                                    <h5>First slide label 1</h5>
+                                    <p>Some representative placeholder content for the first slide.</p>
+                                  </div>
+                                </div>
+                                <div class="carousel-item">
+                                  <img src="/public/assets/edi.png" class="w-100 d-block items-center flex-col justify-center rounded-md" alt="...">
+                                  <div class="carousel-caption d-none d-md-block mt-[20%]">
+                                    <h5>First slide label 1</h5>
+                                    <p>Some representative placeholder content for the first slide.</p>
+                                  </div>
+                                </div>
+                                <div class="carousel-item">
+                                  <img src="/public/assets/edi.png" class="w-100 d-block flex-col items-center justify-center rounded-md" alt="...">
+                                  <div class="carousel-caption d-none d-md-block mt-[20%]">
+                                    <h5>First slide label 1</h5>
+                                    <p>Some representative placeholder content for the first slide.</p>
+                                  </div>
+                                </div>
+                                <div class="carousel-item">
+                                  <img src="/public/assets/edi.png" class="w-100 d-block flex-col items-center justify-center rounded-md" alt="...">
+                                  <div class="carousel-caption d-none d-md-block mt-[20%]">
+                                    <h5>First slide label 1</h5>
+                                    <p>Some representative placeholder content for the first slide.</p>
+                                  </div>
+                                </div>
+                                <div class="carousel-item">
+                                  <img src="/public/assets/edi.png" class="w-100 d-block flex-col items-center justify-center rounded-md" alt="...">
+                                  <div class="carousel-caption d-none d-md-block mt-[20%]">
+                                    <h5>First slide label 1</h5>
+                                    <p>Some representative placeholder content for the first slide.</p>
+                                  </div>
+                                </div>
+                                <div class="carousel-item">
+                                  <img src="/public/assets/edi.png" class="w-100 d-block flex-col items-center justify-center rounded-md" alt="...">
+                                  <div class="carousel-caption d-none d-md-block mt-[20%]">
+                                    <h5>First slide label 1</h5>
+                                    <p>Some representative placeholder content for the first slide.</p>
+                                  </div>
+                                </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                      <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                      <span class="visually-hidden">Next</span>
+                                    </button>
+                              </div>
+                                  
+                              <div class="mt-4 mb-4"></div>
+                                    
+                            </div>
+                          </div>
+                        </div>
+
                       </section>
                     </article>
+                    <!-- <footer class="main-footer">
+                      <p class="d-flex mt-3 align-items-center justify-content-center text-blue">&copy; All rights reserved  <script>document.writeln(new Date().getFullYear());</script>  Macus Edidiong Cletus</p>
+                   </footer> -->
                   </section>
                 </div>
 
               </div>
             </div>
 
-            <footer class="main-footer">
-              <p class="d-flex mt-3 align-items-center justify-content-center text-blue">&copy; All rights reserved  <script>document.writeln(new Date().getFullYear());</script>  Macus Edidiong Cletus</p>
-           </footer>
           </div>
         </div>
       </div>
 
+       <!--- SIGNUP AND LOGIN MODAL PAGE --->
+      <div class="login-contents">
+        <div class="contents" id="signupLogin">
+          <span id="auth-close" class="auth-close">&times;</span>
+          <div class="auth-contents">
+            <p>Don't have an account? <button type="button" id="signupBtn" class="signupBtn" onclick="closeDisplay();">Sign Up</button></p>
+          
+            <p>Have an account? <button type="button" id="loginBtn-inner" class="loginBtn-inner" onclick="closeDisplayLogin();">Login</button></p>
+          </div>
+        </div>
+      </div>
      
 
       <!--CONTACT MODAL-->
@@ -358,9 +358,9 @@
                 </form>
               </div>
 
-              <footer class="main-footer">
+              <!-- <footer class="main-footer">
                 <p class="d-flex mt-3 align-items-center justify-content-center text-blue">&copy; All rights reserved  <script>document.writeln(new Date().getFullYear());</script>  Macus Edidiong Cletus</p>
-              </footer>
+              </footer> -->
             </div>
           </div>
         </div>

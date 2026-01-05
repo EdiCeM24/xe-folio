@@ -1,6 +1,12 @@
 // const dropMenuEl = document.getElementById("dropMenu");
 // const asideEl = document.getElementById("aside");
 // const closeEl = document.getElementById("close");
+const modalServicesEl = document.getElementById("modalServices");
+const servicesContainerEl = document.getElementById("services-container");
+const servicesCloseEl = document.getElementById("services-closeBtn");
+
+
+
 const dropBtnEl = document.querySelector(".dropBtn");
 const signupLoginEl = document.querySelector("#signupLogin");
 const authCloseEl = document.getElementById("auth-close");
@@ -91,6 +97,20 @@ function closeDisplay() {
   signupLoginEl.style.display = "none";
 }
 
+// SERVICES MODAL PAGE
+modalServicesEl.addEventListener("click", openServices);
+servicesCloseEl.addEventListener("click", closeServices);
+
+
+function openServices() {
+  setTimeout(() => {
+    servicesContainerEl.style.display = "block";
+  }, 10);
+}
+
+function closeServices() {
+  servicesContainerEl.style.display = "none";
+}
 
 
 // dropMenuEl.addEventListener('click', () => {
